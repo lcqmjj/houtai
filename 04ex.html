@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div>
+		用户名称：<input onfocus="uname_focus()" type="text" id="uname" onblur="check_uname()">
+		<span id="uname_msg"></span>
+		</div>
+		<div>
+		用户密码：<input onfocus="upwd_focus()" type="password" id="upwd" onblur="check_upwd()">
+		<span id="upwd_msg"></span>
+		</div>
+		<script>
+			//用户名框获得焦点时调用
+			function uname_focus(){
+				uname_msg.innerHTML="用户名为6-12个字";
+			}
+			//密码框获得焦点时调用
+			function upwd_focus(){
+				upwd_msg.innerHTML="密码为6-8的字符";
+			}
+			//用户名失去焦点
+			function check_uname(){
+				//1.得到用户名框内的值
+				var userName=uname.value;
+				//2.判断是否为空
+				if(userName==""){
+					uname_msg.innerHTML="用户名不能为空";
+				}else{
+					uname_msg.innerHTML="通过";
+				}
+			}
+			//密码框失去焦点
+			function check_upwd(){
+			//1.得到密码框内的值
+			var userPwd=upwd.value;
+			//2.判断是否为空
+			if(userPwd==""){
+				upwd_msg.innerHTML="密码不能为空";
+			}else{
+				upwd_msg.innerHTML="通过";
+			}
+		}
+		</script>
+	</body>
+</html>

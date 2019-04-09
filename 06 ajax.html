@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			//标准创建异步对象
+			var xhr=new XMLHttpRequest();
+			console.log(xhr);
+			//2.绑定监听事件
+			xhr.onreadystatechange=function(){
+				//接收响应，只有在readystate值为4时
+				//响应传递完毕
+				//并且我们只操作响应成功的数据
+				//那么就要求，响应的状态码为200
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+				}
+			}
+			//3.创建请求，打开连接
+			xhr.open("get","接口","true");
+			//4.发送请求
+			xhr.send(null);
+
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

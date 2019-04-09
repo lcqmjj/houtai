@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			//标准创建异步对象
+			var xhr=new XMLHttpRequest();
+			console.log(xhr);
+			//IE8以下的创建方式
+			var xhr=new ActiveXobject("Microsoft.XMLHttp");
+			//兼容性写法，需要判断window.XMLHttpRequest是否有值
+			if(window.XMLHttpRequest){
+				var xhr=new XMLHttpRequest();
+			}else{
+				var xhr=new ActiveXobject("Microsoft.XMLHttp");
+			}
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
